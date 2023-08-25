@@ -1,3 +1,5 @@
+var sampleData ='{"data":[{"type":"articles","id":"1","attributes":{"title":"JSON:API paints my bikeshed!","body":"The shortest article. Ever."},"relationships":{"author":{"data":{"id":"42","type":"people"}}}}],"included":[{"type":"people","id":"42","attributes":{"name":"John"}}]}';
+
 function karateValidationJsonConverter() {
   var json;
   if (document.getElementById('code').value) {
@@ -146,4 +148,17 @@ function minifyJson() {
       document.getElementById('output').value = e;
     }
   }
+}
+
+function getSample() {
+  document.getElementById("code").value = sampleData;
+//  document.getElementById("code").value = httpGet(url);
+}
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
 }

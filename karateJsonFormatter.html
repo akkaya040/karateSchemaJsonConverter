@@ -4,17 +4,22 @@
         <title>JavaScript Code Runner</title>
     </head>
 
-    <body>
+    <body style="background-color: #28616b;">
         <h3>Karate Schema Validation Json Converter</h3>
 
-        <div style="display: flex;">
-            <textarea id="code" style="flex: 1; height: 80vh;" spellcheck="false"></textarea>
-            <textarea id="output" style="flex: 1; height: 80vh; overflow: auto;" spellcheck="false"></textarea>
+        <div style="display: flex;" >
+            <textarea id="code" style="flex: 2; height: 80vh; background-color: #fc0;" spellcheck="false" placeholder="Enter JSON here..."></textarea>
+            <div style="overflow: auto; height: 80vh; background-color: #fc5;"> .... </div>
+            <textarea id="output" style="flex: 2; height: 80vh; overflow: auto; background-color: #fc0;" spellcheck="false"></textarea>
         </div>
-        <div style="display: flex;height: 12;"></div>
-        <button onclick="karateValidationJsonConverter()">Generate Schema</button>
-        <button onclick="formatJson()">Format JSON</button>
-        <button onclick="minifyJson()">Minify JSON</button>
+        <div style="display: flex;height: 20;"></div>
+        <div style="display: flex;height: 30;">
+            <button onclick="karateValidationJsonConverter()">Generate Schema</button>
+            <button onclick="formatJson()">Format JSON</button>
+            <button onclick="minifyJson()">Minify JSON</button>
+            <button onclick="getSample()">Get Sample</button>
+        </div>
+
         <script src="./jsonconverter.js"></script>
     </body>
 </html>
