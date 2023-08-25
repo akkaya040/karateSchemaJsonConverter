@@ -1,0 +1,21 @@
+<html>
+
+    <head>
+        <title>JavaScript Code Runner</title>
+    </head>
+
+    <body>
+        <h3>Karate Schema Validation Json Converter</h3>
+
+        <div style="display: flex;">
+            <textarea id="code" style="flex: 1; height: 80vh;" spellcheck="false"></textarea>
+            <textarea id="output" style="flex: 1; height: 80vh; overflow: auto;" spellcheck="false"></textarea>
+        </div>
+        <div style="display: flex;height: 12;"></div>
+        <button onclick="karateValidationJsonConverter()">Generate Schema</button>
+        <button onclick="formatJson()">Format JSON</button>
+        <button onclick="minifyJson()">Minify JSON</button>
+        <script src="./jsonconverter.js"></script>
+    </body>
+</html>
+

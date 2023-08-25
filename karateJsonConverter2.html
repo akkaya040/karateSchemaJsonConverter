@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>JSON Schema Generator</title>
+    </head>
+    <body>
+    <div class="container">
+        <h1>JSON Schema Generator</h1>
+        <div class="editor-container">
+            <div class="editor">
+                <textarea id="code" spellcheck="false" placeholder="Enter JSON here..."></textarea>
+                <div class="editor-buttons">
+                    <button onclick="karateValidationJsonConverter()">Generate Schema</button>
+                    <button onclick="formatJson()">Format JSON</button>
+                    <button onclick="minifyJson()">Minify JSON</button>
+                </div>
+            </div>
+            <div class="output">
+                <textarea id="output"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="./jsonconverter.js"></script>
+    </body>
+</html>
