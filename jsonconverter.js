@@ -13,11 +13,10 @@ function karateValidationJsonConverter() {
   }
 
   var responseName;
-  if (document.getElementById('responseInput').value) {
+  if (document.getElementById('responseInput').value)
     responseName = document.getElementById('responseInput').value;
-  } else {
+  else
     responseName = 'response';
-  }
 
   let outArr = {};
   let output = convertJson(json, responseName, true);
