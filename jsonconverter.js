@@ -12,8 +12,15 @@ function karateValidationJsonConverter() {
     }
   }
 
+  var responseName;
+  if (document.getElementById('responseInput').value) {
+    responseName = document.getElementById('responseInput').value;
+  } else {
+    responseName = 'response';
+  }
+
   let outArr = {};
-  let output = convertJson(json, 'response', true);
+  let output = convertJson(json, responseName, true);
   ouput = Object.assign(output, outArr);
   Object.keys(ouput).forEach(key => ouput[key] === "#undefined" && delete ouput[key]);
   document.getElementById('output').value = JSON.stringify(output, null, 2);
